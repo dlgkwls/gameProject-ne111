@@ -1,4 +1,4 @@
-import pygame, sys, random
+import pygame, sys, random, time
  
 
 
@@ -51,7 +51,7 @@ game_state = GameState()
         
 
 #Game Screen
-screen_width = 1920
+screen_width = 1080
 screen_height = 1080
 screen = pygame.display.set_mode((screen_width,screen_height))
 pygame.display.set_caption("Hi")
@@ -61,4 +61,5 @@ ready_text = pygame.image.load("ready.jpg")
 player_group = pygame.sprite.Group()
 
 while True:
-    game_state.intro()
+    game_state.state_manager()
+    clock.tick(60)
