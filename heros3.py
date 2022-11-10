@@ -1,23 +1,46 @@
-import pygame, sys
-from pygame.locals import *
+import pygame, sys, random
 
 pygame.init()
 
-windowSurface = pygame.display.set_mode((500, 400), 0, 32)
-pygame.display.set_caption('Hello world!')
+# CREATING CANVAS
+canvas = pygame.display.set_mode((500, 500))
 
-BLACK = (0, 0, 0)
-WHITE = (255, 255, 255)
-RED = (255, 0, 0)
-GREEN = (0, 255, 0)
-BLUE = (0, 0, 255)
+# TITLE OF CANVAS
+pygame.display.set_caption("My Board")
+exit = False
 
-# Set up the fonts.
-basicFont = pygame.font.SysFont(None, 48)
-# Set up the text.
-text = basicFont.render('Hello world!', True, WHITE, BLUE)
-textRect = text.get_rect()
-textRect.centerx = windowSurface.get_rect().centerx
-textRect.centery = windowSurface.get_rect().centery
-# Draw the white background onto the surface.
-windowSurface.fill(WHITE)
+
+    
+
+
+class GameState():
+    def __init__(self):
+        self.state = 'main_game'
+
+    def intro(self):
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()  
+
+
+        screen.blit(background,(0,0))
+        screen.blit(ready_text,(Screen_width/2 - 115, scrren_height/2 - 33))
+        player_group.draw(Screen)
+        player_group.update()
+ 
+
+    def main_game(self):
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                exit = True
+                sys.exit()
+            #if event.type == pygame.MOUSEBUTTONDOWN:
+                #if mouse clicked .?
+
+        
+        pygame.display.flip()
+        
+
+
+pygame.display.update()
