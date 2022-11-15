@@ -15,6 +15,7 @@ class GameState():
                 self.state = 'main_game'  
 
         #drawing
+        pygame.image.load("intro.jpg")
         screen.blit(background,(0,0))
         screen.blit(ready_text,(screen_width/2 - 115, screen_height/2 - 33))
         player_group.draw(screen)
@@ -29,6 +30,7 @@ class GameState():
                 sys.exit()
 
         #Drawing
+        pygame.image.load("main.png")
         screen.blit(background,(0,0))
         player_group.draw(screen)
         player_group.update()
