@@ -59,6 +59,9 @@ screen = pygame.display.set_mode((screen_width,screen_height))
 pygame.display.set_caption("Hi")
 background = pygame.image.load("background.jpg")
 ready_text = pygame.image.load("ready.jpg")
+start_text = pygame.image.load("start.png")
+round_one_pic = pygame.image.load("round one.png")
+round_two_pic = pygame.image.load("round two.png")
 
 player_group = pygame.sprite.Group()
 
